@@ -42,7 +42,7 @@ function listDestination(data) {
             <div class="destination__text">
                 <h2 class="destination__name">${data.destination}</h2>
                 <h3 class="destination__title">${data.title}</h3>
-                <p class="destination__subtitle">${data.subtitle}</p>
+                <h4 class="destination__subtitle">${data.subtitle}</h4>
                 <p class="destination__description">${data.text}</p>
                 <ul class="destination__facilities">
 
