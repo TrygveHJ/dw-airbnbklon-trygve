@@ -1,7 +1,7 @@
 const params = new URLSearchParams(location.search)
 console.log(params.get("id"));
 let paramsId = params.get("id")
-let destinationData = "./data/"
+// let destinationData = "./data/"
 // let a = new URL(paramsId, destinationData)
 // console.log(a);
 
@@ -33,27 +33,30 @@ const destinationDOM = document.querySelector(".destination")
 
 function listDestination(data) {
     console.log(data);
+    console.log(data.destination);
+    console.log(data.image);
+    console.log(data.facilities);
 
-    destinationDOM.innerHTML = data.array.map(destinationData =>
+    destinationDOM.innerHTML =
         `<article>
             <div>
-                <h2>${destinationData.destination}</h2>
-                <h3>${destinationData.title}</h3>
-                <p class="subtitle">${destinationData.subtitle}</p>
-                <p>${destinationData.text}</p>
+                <h2>${data.destination}</h2>
+                <h3>${data.title}</h3>
+                <p class="subtitle">${data.subtitle}</p>
+                <p>${data.text}</p>
                 <ul class="facilities">
 
                 </ul>
             </div>
             <div>
-                <img src="img/${destinationData.image}" alt=""></img>
+                <img src="img/${data.image}" alt=""></img>
                 <button>&#10084; Favorit</button>
             </div>
         </article>`
-    ).join("")
+
     const facilitiesDOM = document.querySelector(".facilities")
     facilitiesDOM.innerHTML = data.facilities.map(facility =>
         `<li>${facility}</li>`
-    )
+    ).join("")
 
 }
