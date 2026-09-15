@@ -38,25 +38,25 @@ function listDestination(data) {
     console.log(data.facilities);
 
     destinationDOM.innerHTML =
-        `<article>
-            <div>
-                <h2>${data.destination}</h2>
-                <h3>${data.title}</h3>
-                <p class="subtitle">${data.subtitle}</p>
-                <p>${data.text}</p>
-                <ul class="facilities">
+        `<article class="destination__article">
+            <div class="destination__text">
+                <h2 class="destination__name">${data.destination}</h2>
+                <h3 class="destination__title">${data.title}</h3>
+                <p class="destination__subtitle">${data.subtitle}</p>
+                <p class="destination__description">${data.text}</p>
+                <ul class="destination__facilities">
 
                 </ul>
             </div>
             <div>
-                <img src="img/${data.image}" alt=""></img>
-                <button>&#10084; Favorit</button>
+                <img src="img/${data.image}" alt="" class="destination__img"></img>
+                <button class="destination__favorite">&#10084; Favorit</button>
             </div>
         </article>`
 
-    const facilitiesDOM = document.querySelector(".facilities")
+    const facilitiesDOM = document.querySelector(".destination__facilities")
     facilitiesDOM.innerHTML = data.facilities.map(facility =>
-        `<li>${facility}</li>`
+        `<li class="facilities__item">${facility}</li>`
     ).join("")
 
 }
