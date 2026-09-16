@@ -44,13 +44,14 @@ function listDestination(data) {
                 <h3 class="destination__title">${data.title}</h3>
                 <h4 class="destination__subtitle">${data.subtitle}</h4>
                 <p class="destination__description">${data.text}</p>
+                <h5 class="facilities__heading">Faciliteter</h5>
                 <ul class="destination__facilities">
 
                 </ul>
             </div>
-            <div>
+            <div class="destination__image-wrap">
                 <img src="img/${data.image}" alt="" class="destination__img"></img>
-                <button class="destination__favorite">&#10084; Favorit</button>
+                <button class="destination__favorite"><span class="heart">&#10084;</span> Favorit</button>
             </div>
         </article>`
 
