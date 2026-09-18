@@ -30,9 +30,44 @@ a {
 
 /* #endregion reset */
 
+/* #region index */
+.apartments {
+    display: grid;
+    grid-template-columns: repeat(4, 18rem);
+    column-count: 4;
+    gap: 1rem;
+    padding-inline-start: 3rem;
+    padding-inline-end: 3rem;
+}
 
+.apartments li {
+    max-width: 18rem;
+}
 
+.apartment__img-link {
+    height: 18rem;
+    width: 18rem;
+}
 
+.apartments a img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+}
+
+.apartment__bottom {
+    display: flex;
+    justify-content: space-between;
+    background: lightblue;
+    padding-block: 0.5rem;
+}
+
+.apartment__favorite {
+    border: none;
+    background: none;
+}
+
+/* #endregion index */
 
 /* #region destination */
 
