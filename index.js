@@ -26,12 +26,16 @@ function listDestinations(data) {
     console.log(data);
 
     apartmentsDOM.innerHTML = data.destinations.map(destination =>
-        `<li> <a href="destination.html?id=${destination.id}"><img src="img/${destination.image}"></a>
-        <div class="apartment-bottom">
-        <button>&#10084;</button>
+        `
+        <li> 
+        <a href="destination.html?id=${destination.id}" class="apartment__img-link"><img src="img/${destination.image}"></a>
+        <div class="apartment__bottom">
+        <button class="apartment__favorite">&#10084;</button>
         <a href="destination.html?id=${destination.id}" class="color1 apartment-more">
         More</a>
-        </div></li>`
+        </div>
+        </li>
+        `
     ).join("")
 
 }
